@@ -59,7 +59,7 @@ SQL
 
 ### Key Features <a name="key-features"></a>
 
-- **[Get info about animals]**
+- **[Get info about patients]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,9 +114,8 @@ Install postgreSQL [https://www.postgresql.org/download/]
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[query and update animals table]**
+- [ ] **[query and update patients table]**
 - [ ] **[query multiple tables]**
-- [ ] **[add "join table" for visits]**
 - [ ] **[database performance audit]**
 - [ ] **[add database schema diagram]**
 
