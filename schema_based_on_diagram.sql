@@ -11,3 +11,9 @@ ALTER TABLE invoices_items ADD CONSTRAINT fk_treatment_id FOREIGN KEY (treatment
 CREATE TABLE treatments (id SERIAL PRIMARY KEY, type VARCHAR(50), name VARCHAR(50));
 ALTER TABLE invoices_items ADD CONSTRAINT fk_treatment_id FOREIGN KEY (treatment_id) REFERENCES treatments(id);
 CREATE TABLE medical_histories_treatment (medical_history_id INT REFERENCES medical_histories(id), treatment_id INT REFERENCES treatments(id));
+CREATE INDEX idx_patients_name ON patients(name);
+CREATE INDEX idx_medical_histories_patient_id ON medical_histories(patient_id);
+CREATE INDEX idx_invoices_medical_history_id ON invoices(medical_history_id);
+CREATE INDEX idx_invoices_items_invoice_id ON invoices_items(invoice_id);
+CREATE INDEX idx_invoices_items_treatment_id ON invoices_items(treatment_id);
+CREATE INDEX idx_treatments_name ON treatments(name);
