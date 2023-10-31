@@ -9,7 +9,6 @@ ALTER TABLE invoices_items ADD CONSTRAINT fk_invoice_id FOREIGN KEY (invoice_id)
 CREATE TABLE treatments (id SERIAL PRIMARY KEY, type VARCHAR(50), name VARCHAR(50));
 ALTER TABLE invoices_items ADD CONSTRAINT fk_treatment_id FOREIGN KEY (treatment_id) REFERENCES treatments(id);
 CREATE TABLE treatments (id SERIAL PRIMARY KEY, type VARCHAR(50), name VARCHAR(50));
-ALTER TABLE invoices_items ADD CONSTRAINT fk_treatment_id FOREIGN KEY (treatment_id) REFERENCES treatments(id);
 CREATE TABLE medical_histories_treatment (medical_history_id INT REFERENCES medical_histories(id), treatment_id INT REFERENCES treatments(id));
 CREATE INDEX idx_patients_name ON patients(name);
 CREATE INDEX idx_medical_histories_patient_id ON medical_histories(patient_id);
